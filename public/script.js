@@ -12,7 +12,7 @@ console.log(myName);
 
 var peer = new Peer(undefined, {
   host: '/',
-  port: '3001'
+  port: '443'
 });
 
 let myVideoStream;
