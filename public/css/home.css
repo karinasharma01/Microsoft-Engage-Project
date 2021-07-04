@@ -1,0 +1,156 @@
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    line-height: 2;
+    font-weight: 200;
+  }
+  
+  
+  h2{
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1.5;
+  
+  }
+  
+  h3{
+  
+    font-family: "Montserrat";
+    font-weight: 800;
+  }
+  
+  p{
+    color: #8f8f8f;
+  }
+  
+  body{
+    font-family: "Montserrat";
+  }
+  
+  /*************************************CLASS SELECTORS**************************/
+  
+  .container-fluid{
+    padding: 3% 15% 7% ;
+  }
+  
+  /* Navigation Bar */
+  
+  .navbar{
+    padding: 0 0 4.5rem;
+  }
+  .navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-item{
+    padding: 0 18px;
+  }
+  
+  .nav-link{
+    font-size: 1.3rem;
+    font-family: "Montserrat"
+  }
+  
+.rightContent {
+    position: relative;
+    width: 120%;
+    height: 100%;
+
+}
+
+  /* SIGNUP BUTTONS */
+  
+  .signup-button{
+    margin: 5% 3% 5% 0;
+  }
+  
+  
+  .feature-box{
+     text-align: center;
+     padding: 5%;
+  }
+  
+  .icon{
+    color: #70719c;
+    margin-bottom: 1rem;
+  }
+  
+  .icon:hover{
+    color: #464775;
+  }
+  /* TITLE IMAGE */
+  
+  /*************************************ID SELECTORS**************************/
+  
+  #describe {
+      background-color: #8b90db;
+      color: white;
+      text-align: center;
+      padding: 7% 15%;
+  }
+   /* Call to Action */
+  .describe-meeting {
+    font-family: "Montserrat";
+    line-height: 1.5;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  
+  #cta{
+    background-color: #464775;
+    color: #fff;
+    text-align: center;
+    padding: 7% 15%;
+  }
+  
+  .cta-heading{
+    font-family: "Montserrat";
+    line-height: 1.5;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  
+  /* FOOTER SECTION */
+  
+  #footer{
+    padding: 7% 15%;
+    text-align: center;
+  }
+  
+  .social-icon{
+    margin: 20px 10px;
+  }
+  
+  #title{
+    background-color: #464775;
+    color: #fff;
+  }
+  
+  /* MEDIA QUERY */
+  
+  @media (max-width:1028px)
+  {
+  
+    #title{
+      text-align: center;
+    }
+}
+  /***
+  .
+  .
+  .
+  .
+  ..
+  .
+  .
+  ..
+  ..
+  ..
+  .
+  .
+  .
+  .
+  */
