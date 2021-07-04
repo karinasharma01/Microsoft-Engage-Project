@@ -13,7 +13,13 @@ const ejs = require('ejs')
 const server = require('http').Server(app);
 const { v4: uuidV4 } = require('uuid');
 const io = require("socket.io")(server);
+const { ExpressPeerServer } = require('peer');
+const peerServer = ExpressPeerServer(server, {
+  debug: true
+});
 const userS = [], userI = [];
+
+app.use('/peerjs', peerServer);
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));

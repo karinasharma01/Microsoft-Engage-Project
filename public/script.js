@@ -11,6 +11,7 @@ const myName = prompt('Enter your name');
 console.log(myName);
 
 var peer = new Peer(undefined, {
+  path: '/peerjs',
   host: '/',
   port: '443'
 });
