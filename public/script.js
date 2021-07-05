@@ -166,7 +166,7 @@ const disconnectNow = () => {
   {
     userLocation="https://localhost:3000/user";
   }
-  window.location = userLocation;
+  window.location = `${userLocation}`;
 }
 
 //code to share url of roomId
