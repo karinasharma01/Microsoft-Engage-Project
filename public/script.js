@@ -161,7 +161,12 @@ const unsetVideoButton = () => {
 
 //code for disconnect from client
 const disconnectNow = () => {
-  window.location = "http://localhost:3000/user";
+  const userLocation = "https://nameless-scrubland-25642.herokuapp.com/user";
+  if(userLocation==""||userLocation==NULL)
+  {
+    userLocation="https://localhost:3000/user";
+  }
+  window.location = userLocation;
 }
 
 //code to share url of roomId
