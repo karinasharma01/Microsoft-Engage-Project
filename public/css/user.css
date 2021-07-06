@@ -1,25 +1,32 @@
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 0px;
-  }
-  
-  .navbar-nav li a :hover {
-    color: #464775;
-  }
-  
-  body {
-      background-color: #E8ECEF;
-    }
-  .centered {
-      padding-top: 200px;
-      text-align: center;
-  }
+.navbar{
+  padding: 0 2.5rem 0;
+}
+.navbar-brand{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+.nav-link{
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: white;
+}
+body {
+  background-color: #8b90db;
+}
+
+.centered {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.join {
+  width: 20%;
+  align-items: center;
+}
