@@ -1,4 +1,4 @@
-const socket = io('/');  //socket connection
+const socket = io('/');
 const videoGrid = document.getElementById('video-grid');
 const userDropDown = document.getElementById('myDropdown');
 const myVideo = document.createElement('video');
@@ -26,7 +26,6 @@ navigator.mediaDevices.getUserMedia({
 
 
   peer.on("call", call => {
-    //var callAccepted = confirm("Incoming VideoCall");
     console.log("Answered");
       call.answer(stream);
       const video = document.createElement('video');
@@ -158,30 +157,6 @@ const unsetVideoButton = () => {
   document.querySelector('.Video__button').innerHTML = html;
   console.log("Cammera Mode OFF");
 }
-
-//code for disconnect from client
-const disconnectNow = () => {
-  const userLocation = "https://nameless-scrubland-25642.herokuapp.com/user";
-  if(userLocation==""||userLocation==NULL)
-  {
-    userLocation="https://localhost:3000/user";
-  }
-  window.location = `${userLocation}`;
-}
-
-//code to share url of roomId
-/*const share = () => {
-  var share = document.createElement('input'),
-    text = window.location.href;
-
-  console.log(text);
-  document.body.appendChild(share);
-  share.value = text;
-  share.select();
-  document.execCommand('copy');
-  document.body.removeChild(share);
-  alert('Copied');
-}*/
 
 inviteButton.addEventListener("click", (e) => {
   prompt(

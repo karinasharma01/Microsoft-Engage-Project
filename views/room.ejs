@@ -57,10 +57,8 @@
             <span>Share Desktop</span>
           </div>
           <div class="main__controls__button">
-            <!-- remove -->
             <div class="dropdown">
               <i onclick="getUsers()" class="fas fa-user-friends dropbtn"></i>
-                <!-- <span>Participants</span> -->
             <div id="myDropdown" class="dropdown-content">
             <!-- ADD NEW <a> TAGS -->
             </div>
@@ -77,8 +75,8 @@
           </div>
         </div>
         <div class="main__controls__block">
-          <div onclick="disconnectNow()" class="main__controls__button main__leave" style=" color: Tomato;">
-            <span style="color:azure;">Leave Meeting</span>
+          <div class="main__controls__button main__leave" style=" color: Tomato;">
+            <a href="/user" style="color: azure;">Leave Meeting</a>
           </div>
         </div>
 
@@ -95,7 +93,7 @@
         </ul>
       </div>
       <div class="main__messages_container">
-        <input id="chat_messages" type="text" placeholder="Type message here...">
+        <input id="chat_messages" type="text" placeholder="Type your Message here..">
       </div>
     </div>
 
