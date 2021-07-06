@@ -269,7 +269,7 @@ const listOfUser = () => {
   }
   for (var i = 0; i < userlist.length; i++) {
     var x = document.createElement("a");
-    var t = document.createTextNode(`VideoSector ${i + 1}`);
+    var t = document.createTextNode(`Participant ${i + 1}`);
     x.appendChild(t);
     userDropDown.append(x);
   }
