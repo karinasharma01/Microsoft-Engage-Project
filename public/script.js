@@ -227,26 +227,29 @@ function stopScreenShare() {
 }
 
 //raised hand
-const raiseHand = () => {
+const raisedHand = () => {
   const displayText = `${myName} has raised hand.`;
   socket.emit('message', displayText, myName);
-  handLogoUnchanged();
+  unChangeHandLogo();
 }
 
-const handLogoUnchanged = () => {
+const unChangeHandLogo = () => {
   const html = `<i class="far fa-hand-paper" style="color:red;"></i>
                 <span>Raised</span>`;
-  document.querySelector('.raiseHand').innerHTML = html;
-  console.log("Changed.")
-  handLogoChanged();
+  document.querySelector('.raisedHand').innerHTML = html;
+  console.log("change")
+  changeHandLogo();
 }
-const handLogoChanged = () => {
+
+const changeHandLogo = () => {
   setInterval(function () {
     const html = `<i class="far fa-hand-paper" style="color:"white"></i>
                 <span>Hand</span>`;
-    document.querySelector('.raiseHand').innerHTML = html;
+    document.querySelector('.raisedHand').innerHTML = html;
   }, 3000);
 }
+
+//kick option
 
 socket.on('remove-User', (userId) => {
   if (cUser == userId) {
