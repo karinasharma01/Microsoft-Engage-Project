@@ -133,25 +133,25 @@ const setMuteButton = () => {
 }
 
 //Starting & stopping video
-const videoOnOff = () => {
+const setVideoControls = () => {
   const enabled = myVideoStream.getVideoTracks()[0].enabled;
   if (enabled) {
     myVideoStream.getVideoTracks()[0].enabled = false;
-    unsetVideoButton();
+    setVideoOff();
   } else {
-    setVideoButton();
+    setVideoOn();
     myVideoStream.getVideoTracks()[0].enabled = true;
   }
 }
 
-const setVideoButton = () => {
+const setVideoOn = () => {
   const html = `<i class="fas fa-video"></i>
                 <span>Stop Video</span>`;
   document.querySelector('.Video__button').innerHTML = html;
   console.log("Video set On.");
 }
 
-const unsetVideoButton = () => {
+const setVideoOff = () => {
   const html = `<i class="fas fa-video-slash" style="color:red;"></i>
                 <span>Start Video</span>`;
   document.querySelector('.Video__button').innerHTML = html;
