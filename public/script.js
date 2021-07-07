@@ -62,7 +62,7 @@ navigator.mediaDevices.getUserMedia({
   });
 */
   socket.on('user-connected', (userId) => {
-    console.log('user ID fetch connection: ' + userId);
+    console.log('User ID Connected: ' + userId);
     connectToNewUser(userId, stream);
   })
 
@@ -71,7 +71,7 @@ navigator.mediaDevices.getUserMedia({
 
 socket.on('user-disconnected', userId => {
   if (peers[userId]) peers[userId].close();
-  console.log('user ID fetch Disconnect: ' + userId);
+  console.log('User ID Disconnected:' + userId);
 });
 
 
@@ -106,6 +106,7 @@ const addVideoStream = (video, stream) => {
   videoGrid.append(video);
 }
 
+//Option to mute & unmute yourself in a meeting
 const muteUnmute = () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
   if (enabled) {
@@ -131,8 +132,7 @@ const setMuteButton = () => {
   console.log("Muted");
 }
 
-
-//Video ON or OFF
+//Starting & stopping video
 const videoOnOff = () => {
   const enabled = myVideoStream.getVideoTracks()[0].enabled;
   if (enabled) {
@@ -148,14 +148,14 @@ const setVideoButton = () => {
   const html = `<i class="fas fa-video"></i>
                 <span>Stop Video</span>`;
   document.querySelector('.Video__button').innerHTML = html;
-  console.log("Cammera Mode ON");
+  console.log("Video set On.");
 }
 
 const unsetVideoButton = () => {
   const html = `<i class="fas fa-video-slash" style="color:red;"></i>
                 <span>Start Video</span>`;
   document.querySelector('.Video__button').innerHTML = html;
-  console.log("Cammera Mode OFF");
+  console.log("Video set OFF");
 }
 
 inviteButton.addEventListener("click", (e) => {
@@ -171,7 +171,6 @@ let inputText = $('input');
 $('html').keydown((e) => {
   if (e.which == 13 && inputText.val().length !== 0) {
     console.log(inputText.val());
-    inputText.fontcolor("yellow");
     socket.emit('message', inputText.val(), myName);
     inputText.val('')
   }
@@ -188,7 +187,7 @@ const scrollToBottom = () => {
   d.scrollTop(d.prop("scrollHeight"));
 }
 
-//screenShare
+//Feature to allow users to share their Screen
 const screenshare = () => {
   navigator.mediaDevices.getDisplayMedia({
     video: {
@@ -216,7 +215,7 @@ const screenshare = () => {
   })
 
 }
-
+//To stop sharing the user's screen
 function stopScreenShare() {
   let videoTrack = myVideoStream.getVideoTracks()[0];
   for (let x = 0; x < currentPeer.length; x++) {
@@ -227,8 +226,9 @@ function stopScreenShare() {
   }
 }
 
-//raised hand
+//Hand Raise Option
 const raisedHand = () => {
+  //display the name of the user who raised hand along with sending the message to all other users.
   const displayText = `${myName} has raised hand.`;
   socket.emit('message', displayText, myName);
   unChangeHandLogo();
@@ -250,7 +250,6 @@ const changeHandLogo = () => {
   }, 3000);
 }
 
-//kick option
 
 socket.on('remove-User', (userId) => {
   if (cUser == userId) {
