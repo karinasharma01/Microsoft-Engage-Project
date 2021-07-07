@@ -82,7 +82,7 @@ function(accessToken, refreshToken, profile, cb) {
 app.get("/", function (req, res) {
     res.render("home");
 });
-
+//Google Authenication
 app.get("/auth/google",
   passport.authenticate('google', { scope: ["profile"] })
 );

@@ -171,6 +171,7 @@ let inputText = $('input');
 $('html').keydown((e) => {
   if (e.which == 13 && inputText.val().length !== 0) {
     console.log(inputText.val());
+    inputText.fontcolor("yellow");
     socket.emit('message', inputText.val(), myName);
     inputText.val('')
   }
@@ -269,7 +270,7 @@ const listOfUser = () => {
   }
   for (var i = 0; i < userlist.length; i++) {
     var x = document.createElement("a");
-    var t = document.createTextNode(`${myName} Participant ${i + 1}`);
+    var t = document.createTextNode(`Participant ${i + 1}`);
     x.appendChild(t);
     userDropDown.append(x);
   }
