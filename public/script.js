@@ -160,19 +160,19 @@ const unsetVideoButton = () => {
 
 inviteButton.addEventListener("click", (e) => {
   prompt(
-    "Copy this link and send it to people you want to meet with",
+    "Copy the below link & share it with people you wanna connect with!",
     window.location.href
   );
 });
 
 //msg sen from user
-let text = $('input');
+let inputText = $('input');
 
 $('html').keydown((e) => {
-  if (e.which == 13 && text.val().length !== 0) {
-    console.log(text.val());
-    socket.emit('message', text.val(), myName);
-    text.val('')
+  if (e.which == 13 && inputText.val().length !== 0) {
+    console.log(inputText.val());
+    socket.emit('message', inputText.val(), myName);
+    inputText.val('')
   }
 });
 
@@ -269,7 +269,7 @@ const listOfUser = () => {
   }
   for (var i = 0; i < userlist.length; i++) {
     var x = document.createElement("a");
-    var t = document.createTextNode(`Participant ${i + 1}`);
+    var t = document.createTextNode(`${myName} Participant ${i + 1}`);
     x.appendChild(t);
     userDropDown.append(x);
   }
