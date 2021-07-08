@@ -107,7 +107,7 @@ const addVideoStream = (video, stream) => {
 }
 
 //Option to mute & unmute yourself in a meeting
-const muteUnmute = () => {
+const setMuteUnmute = () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
   if (enabled) {
     myVideoStream.getAudioTracks()[0].enabled = false;
@@ -227,26 +227,26 @@ function stopScreenShare() {
 }
 
 //Hand Raise Option
-const raisedHand = () => {
+const raiseHand = () => {
   //display the name of the user who raised hand along with sending the message to all other users.
   const displayText = `${myName} has raised hand.`;
   socket.emit('message', displayText, myName);
-  unChangeHandLogo();
+  unChangeHandIcon();
 }
 
-const unChangeHandLogo = () => {
+const unChangeHandIcon = () => {
   const html = `<i class="far fa-hand-paper" style="color:red;"></i>
                 <span>Raised</span>`;
-  document.querySelector('.raisedHand').innerHTML = html;
-  console.log("change")
-  changeHandLogo();
+  document.querySelector('.raiseHand').innerHTML = html;
+  console.log("Change")
+  changeHandIcon();
 }
 
-const changeHandLogo = () => {
+const changeHandIcon = () => {
   setInterval(function () {
     const html = `<i class="far fa-hand-paper" style="color:"white"></i>
                 <span>Hand</span>`;
-    document.querySelector('.raisedHand').innerHTML = html;
+    document.querySelector('.raiseHand').innerHTML = html;
   }, 3000);
 }
 
