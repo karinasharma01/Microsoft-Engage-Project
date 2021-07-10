@@ -19,8 +19,8 @@ It is a way of dealing with, and ultimately succeeding in, an uncertain and turb
 As a part of this journey, I developed a web application that allows video chat between different users.The users can also communicate with each other via sending messages to each other in a chat box.The prototype also supports the functionality to share a user's screen with the other participants & allows the users to start/stop their video & mute/unmute themselves.
 
 # User Journey
-![image](https://user-images.githubusercontent.com/68894444/125161896-9f63c700-e1a2-11eb-8bff-bbb337d63f4f.png)
 As soon as the user visits the website,the home page of the application gets rendered.A new user needs to create an account before using the application while an exisiting user can signin.
+![image](https://user-images.githubusercontent.com/68894444/125161896-9f63c700-e1a2-11eb-8bff-bbb337d63f4f.png)
 
 On clicking "SignUp For Free",the new user gets redirected to the signup route wherein the user is asked to enter his/her details & create a new account.The user can also sign up via Google.
 ![image](https://user-images.githubusercontent.com/68894444/125162098-bb1b9d00-e1a3-11eb-87ce-dcfc14fe9c9f.png)
