@@ -19,6 +19,7 @@ Agile development is a mindset whose values and principles provide guidance on h
 It is a way of dealing with, and ultimately succeeding in, an uncertain and turbulent environment. It's really about thinking through how you can understand what's going on in the environment that you're in today, identify what uncertainty you're facing, and figure out how you can adopt to that as you go along.Agile scrum methodology is a project management system that relies on incremental development. Each iteration consists of two- to four-week sprints, where each sprint’s goal is to build the most important features first and come out with a potentially deliverable product. More features are built into the product in subsequent sprints and are adjusted based on stakeholder and customer feedback between sprints.
 As a part of this journey, I developed a web application that allows video chat between different users.The users can also communicate with each other via sending messages to each other in a chat box.The prototype also supports the functionality to share a user's screen with the other participants & allows the users to start/stop their video & mute/unmute themselves.
 
+# User Journey
 As soon as the user visits the website,the home page of the application gets rendered.A new user needs to create an account before using the application while an exisiting user can signin.
 
 On clicking "SignUp For Free",the new user gets redirected to the signup route wherein the user is asked to enter his/her details & create a new account.The user can also sign up via Google.
