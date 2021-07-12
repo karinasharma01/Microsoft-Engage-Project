@@ -3,7 +3,7 @@
 - Introduction
 - Product Description
 - Technologies
-- Setup,Installation & Launch
+- Launch
 - User Journey
 - Support
 # INTRODUCTION
