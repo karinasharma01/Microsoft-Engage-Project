@@ -28,7 +28,7 @@ On clicking "SignUp For Free",the new user gets redirected to the signup route w
 
 Every time a user registers their details get stored in a database usersDB.MongoDB is used to serve this purpose.
 
-An existing user can simply sign in their account or signin with their Google Account.
+An existing user can simply sign in their account or signin with their Google account.
 ![C1740AFA-1FD5-4F92-B7EB-3F488AB2AC1B](https://user-images.githubusercontent.com/68894444/125246222-2170fe80-e30f-11eb-9cd7-e676ea5adec2.GIF)
 
 
