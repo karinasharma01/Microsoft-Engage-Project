@@ -29,7 +29,8 @@ On clicking "SignUp For Free",the new user gets redirected to the signup route w
 Every time a user registers their details get stored in a database usersDB.MongoDB is used to serve this purpose.
 
 An existing user can simply sign in their account or signin with their Google Account.
-![image](https://user-images.githubusercontent.com/68894444/125162292-9aa01280-e1a4-11eb-863a-26e83c6209d4.png)
+![C1740AFA-1FD5-4F92-B7EB-3F488AB2AC1B](https://user-images.githubusercontent.com/68894444/125246222-2170fe80-e30f-11eb-9cd7-e676ea5adec2.GIF)
+
 
 After the users get logged in they are redirected to the user webpage.The user can setup a new video call or join a video call by entering the URL shared with them by some different user.The user can also logout from their account and would be redirected to the home page of the application.
 
