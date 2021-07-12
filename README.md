@@ -53,6 +53,8 @@ After the users get logged in they are redirected to the user webpage.The user c
 - Google OAuth20
 - UUID
 
+To enable real-time,bidirectional and event-based communication between the browser & the server Socket.IO has been used.PeerJS simplifies WebRTC peer-to-peer data,video and audio calls.It wraps the browser WebRTC implementation to provide a configurable and easy to use P2P connection API and uses just an ID to connect and stream to a remote peer.UUID has been used to generate random unique URLs.For authentication purposes,Passport has been used as an authentication middleware for Node.js. It has a set of various strategies to support authentication using a username & password and also Google OAuth.
+
 # Launch
 Visit https://teams-clone-karina.herokuapp.com/ to access the deployed application.
 
