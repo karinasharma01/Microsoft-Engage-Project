@@ -23,7 +23,8 @@ As soon as the user visits the website,the home page of the application gets ren
 ![image](https://user-images.githubusercontent.com/68894444/125161896-9f63c700-e1a2-11eb-8bff-bbb337d63f4f.png)
 
 On clicking "SignUp For Free",the new user gets redirected to the signup route wherein the user is asked to enter his/her details & create a new account.The user can also sign up via Google.
-![image](https://user-images.githubusercontent.com/68894444/125162098-bb1b9d00-e1a3-11eb-87ce-dcfc14fe9c9f.png)
+
+![F103863C-5BFA-4FC6-A73D-CAC22FABD816](https://user-images.githubusercontent.com/68894444/125245425-2e412280-e30e-11eb-92d8-04f895cedfaa.GIF)
 
 Every time a user registers their details get stored in a database usersDB.MongoDB is used to serve this purpose.
 
