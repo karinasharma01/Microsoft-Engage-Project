@@ -39,28 +39,7 @@ navigator.mediaDevices.getUserMedia({
         alert("The videocall has finished");
       });
     });
-    /*
-    if (callAccepted) {
-      console.log("Answered");
-      call.answer(stream);
-      const video = document.createElement('video');
-      call.on('stream', userVideoStream => {
-        addVideoStream(video, userVideoStream);
-      });
-      //currentPeer = call.peerConnection;
-      currentPeer.push(call.peerConnection);
-      // Handle when the call finishes
-      call.on("close", function () {
-        video.remove();
-        peers[call.peer] = call;
-        alert("The videocall has finished");
-      });
-      // use call.close() to finish a call
-    } else {
-      console.log("Call denied !");
-    }
-  });
-*/
+ 
   socket.on('user-connected', (userId) => {
     console.log('User ID Connected: ' + userId);
     connectToNewUser(userId, stream);
@@ -68,13 +47,13 @@ navigator.mediaDevices.getUserMedia({
 
 });
 
-
+//To handle the event of a user getting disconnected in a room
 socket.on('user-disconnected', userId => {
   if (peers[userId]) peers[userId].close();
   console.log('User ID Disconnected:' + userId);
 });
 
-
+//connecting to a new user
 const connectToNewUser = (userId, stream) => {
   console.log('User-connected :-' + userId);
   const call = peer.call(userId, stream);
@@ -97,6 +76,7 @@ peer.on('open', async id => {
 
 })
 
+//For adding a user's video stream
 const addVideoStream = (video, stream) => {
   video.srcObject = stream;
   video.controls = true;
@@ -118,6 +98,7 @@ const setMuteUnmute = () => {
   }
 }
 
+//code to allow users to unmute themseleves
 const setUnmuteButton = () => {
   const html = `<i class="fas fa-microphone-alt"></i>
                 <span>Mute</span>`;
@@ -125,6 +106,7 @@ const setUnmuteButton = () => {
   console.log("You are Unmuted");
 }
 
+//to allow the users to mute themseleves
 const setMuteButton = () => {
   const html = `<i class="fas fa-microphone-alt-slash" style="color:red;"></i>
                 <span>Unmute</span>`;
@@ -144,6 +126,7 @@ const setVideoControls = () => {
   }
 }
 
+//to start your video
 const setVideoOn = () => {
   const html = `<i class="fas fa-video"></i>
                 <span>Stop Video</span>`;
@@ -151,6 +134,7 @@ const setVideoOn = () => {
   console.log("Video set On.");
 }
 
+//to stop your video
 const setVideoOff = () => {
   const html = `<i class="fas fa-video-slash" style="color:red;"></i>
                 <span>Start Video</span>`;
@@ -165,7 +149,7 @@ inviteButton.addEventListener("click", (e) => {
   );
 });
 
-//msg sen from user
+//sending messages to different users in a room
 let inputText = $('input');
 
 $('html').keydown((e) => {
