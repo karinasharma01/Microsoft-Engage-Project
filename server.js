@@ -41,6 +41,7 @@ app.use(passport.session());
 mongoose.connect('mongodb+srv://admin-karina:Karina002@cluster0.egpxh.mongodb.net/userDB', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex',true);
 
+//userSchema for storing the information of a new user in userDB database
 const userSchema = new mongoose.Schema ({
     firstname: String,
     lastname: String,
@@ -65,6 +66,7 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
+//GoogleOAuth used for authentication of users
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
@@ -103,6 +105,7 @@ app.get("/signin", function (req, res) {
 })
 
 app.get("/user", function (req, res) {
+  //if the user gets authenticated then redirect them to the user page otherwise redirect the user to /signin page.
     if(req.isAuthenticated()){
         res.render("user");
     }
@@ -111,6 +114,7 @@ app.get("/user", function (req, res) {
     }
 });
 
+//Logs out the users from their account.
 app.get("/logout", function(req,res) {
   req.logout();
   res.redirect("/");
